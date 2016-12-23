@@ -1,0 +1,99 @@
+2016/12/23 14:51:33 [error] [exception.ParseError] ParseError: syntax error, unexpected ';', expecting ')' in /home/abhinav/Projects/testsql/protected/migrations/m161223_071411_user.php:12
+Stack trace:
+#0 /home/abhinav/Projects/yii/framework/cli/commands/MigrateCommand.php(414): MigrateCommand->instantiateMigration('m161223_071411_...')
+#1 /home/abhinav/Projects/yii/framework/cli/commands/MigrateCommand.php(109): MigrateCommand->migrateUp('m161223_071411_...')
+#2 [internal function]: MigrateCommand->actionUp(Array)
+#3 /home/abhinav/Projects/yii/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#4 /home/abhinav/Projects/yii/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#5 /home/abhinav/Projects/yii/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /home/abhinav/Projects/yii/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#7 /home/abhinav/Projects/yii/framework/yiic.php(33): CApplication->run()
+#8 /home/abhinav/Projects/testsql/protected/yiic.php(7): require_once('/home/abhinav/P...')
+#9 /home/abhinav/Projects/testsql/protected/yiic(4): require_once('/home/abhinav/P...')
+#10 {main}
+---
+2016/12/23 14:53:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists. The SQL statement executed was: CREATE TABLE `user` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`mrp` int(11),
+	`last_activity_at` int(11),
+	`app_activity_count` int(11),
+	`web_activity_count` int(11),
+	`campaign_source` varchar(255),
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.
+2016/12/23 14:54:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists. The SQL statement executed was: CREATE TABLE `user` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`mrp` int(11),
+	`last_activity_at` int(11),
+	`app_activity_count` int(11),
+	`web_activity_count` int(11),
+	`campaign_source` varchar(255),
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.
+2016/12/23 14:57:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists. The SQL statement executed was: CREATE TABLE `user` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`mrp` int(11),
+	`last_activity_at` int(11),
+	`app_activity_count` int(11),
+	`web_activity_count` int(11),
+	`campaign_source` varchar(255),
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.
+2016/12/23 15:02:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists. The SQL statement executed was: CREATE TABLE `user` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`mrp` int(11),
+	`last_activity_at` int(11),
+	`app_activity_count` int(11),
+	`web_activity_count` int(11),
+	`campaign_source` varchar(255),
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.
+2016/12/23 15:07:44 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists. The SQL statement executed was: CREATE TABLE `user` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`name` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`mrp` int(11),
+	`last_activity_at` int(11),
+	`app_activity_count` int(11),
+	`web_activity_count` int(11),
+	`campaign_source` varchar(255),
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.
+2016/12/23 15:08:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testsql.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2016/12/23 15:08:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1075 Incorrect table definition; there can be only one auto column and it must be defined as a key. The SQL statement executed was: CREATE TABLE `alliance_member` (
+	`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`alliance_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`user_id` int(11) UNSIGNED NOT NULL,
+	`status` TINYINT(1),
+	`created_at` int(11),
+	`updated_at` int(11),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB.

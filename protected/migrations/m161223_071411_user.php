@@ -1,0 +1,30 @@
+<?php
+class m161223_071411_user extends CDbMigration {
+
+	public function safeUp() {
+		$this->createTable(
+			'user',
+			array(
+				'id'				=>'int(11) UNSIGNED NOT NULL AUTO_INCREMENT',
+				'name' 				=> 'varchar(255) NOT NULL',
+				'email' 			=> 'varchar(255) NOT NULL',
+				'password' 			=> 'varchar(255) NOT NULL',
+				'mrp' 				=> 'int(11)',
+				'last_activity_at' 	=> 'int(11)',
+				'app_activity_count'=> 'int(11)',
+				'web_activity_count'=> 'int(11)',
+				'campaign_source' 	=> 'varchar(255)',
+				'status' 			=> 'TINYINT(1)',
+				'created_at' 		=> 'int(11)',
+				'updated_at' 		=> 'int(11)',
+				'PRIMARY KEY (id)',
+				),
+			'ENGINE=InnoDB'
+			);
+	}
+
+	public function safeDown() {
+		$this->dropTable('user');
+
+	}
+}

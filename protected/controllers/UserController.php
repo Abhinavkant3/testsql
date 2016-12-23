@@ -44,12 +44,12 @@ class UserController extends Controller {
 	}
 
 	public function actionFour() {
-		$users = User::model()->active()->with('payments')->findAll(array('condition'=>"app_activity_count > 10000 OR web_activity_count > 5000"));
+		$users = User::model()->active()->with('payments')->findAll(array('condition'=>"(app_activity_count > 10000 OR web_activity_count > 5000)"));
 		if(!$users)
 			$this->renderError('No matches found.');
 		else {
 			foreach ($users as $user) {
-				$user_details[] = array('user_id'=>$users->id);
+				$user_details[] = array('user_id'=>$user->id);
 			}
 			$this->renderSuccess(array('users'=>$user_details));
 		}

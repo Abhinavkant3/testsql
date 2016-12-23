@@ -45,7 +45,7 @@ class User extends CActiveRecord {
 
 	public function scopes() {
 		return array(
-			'active'=>array('condition'=>"status = :status_active", 'params'=>array('status_active'=>self::STATUS_ACTIVE)),
+			'active'=>array('condition'=>"{$this->tableAlias}.status = :status_active", 'params'=>array('status_active'=>self::STATUS_ACTIVE)),
 			'deactivated'=>array('condition'=>"status = :status_deactivated", 'params'=>array('status_deactivated'=>self::STATUS_DEACTIVATED)),
 		);
 	}

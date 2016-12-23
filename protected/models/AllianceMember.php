@@ -42,6 +42,7 @@ class AllianceMember extends CActiveRecord {
 
 	public function beforeSave() {
 		if($this->isNewRecord) { 
+			$this->status = self::STATUS_ACTIVE;
 			$this->created_at = time();
 		}
 		$this->updated_at = time();
